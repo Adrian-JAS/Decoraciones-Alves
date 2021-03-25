@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap');
+
+
+*{
+  box-sizing: border-box;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  font-size: 130%;
+}
+
+body{
+  margin: 0;
+  font-family: 'Slabo 13px', serif; /* Preguntar */
+  /*font-family: 'Slabo 27px', serif; */
+}
+
+.container{
+  margin: auto;
+  width: 98%;
+}
+
+/*------------------------------------------------------Estilos del Header------------------------------------------------------*/
+
+.header{
+  height: 60px;
+}
+
+.header .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo, .icon-menu{
+  margin: 5px;
+  color: #fff;
+  font-size: 118%;
+}
+
+.icon-menu{
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: #CD4444;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+}
+/*-------------------------------------------------------Estilos del menu-------------------------------------------------------*/
+.nav{
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  width: 100%;
+  transition: all 0.6s;
+}
+
+.menu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__link{
+  display: block;
+  padding: 15px;
+  background: #CD4444;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu__link:hover, .select{
+  background: #fff;
+  color: #CD4444;
+}
+
+.show{
+  left: 0;
+}
+.menu-size{
+  font-size: 135%;
+}
+/*------------------------------------------------------Estilos del Banner------------------------------------------------------*/
+.banner{
+  margin-top: -60px;
+  position: relative;
+  z-index: -1;
+  margin-bottom: 20px;
+}
+.banner__img{
+  width: 100%;
+}
+
+.banner .container{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
+
+.banner__text{
+  display: none;
+}
+
+/*-------------------------------------------------------Estilos de info-------------------------------------------------------*/
+
+.info__column{
+  background: #CD4444;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.info__img{
+  border-radius: 5px;
+}
+.bg-danger{
+  background-color: #CD4444 !important; /* modificacion de la clase de mdbootstrap para el fondo de las tarjetas*/
+}
+
+.info-text-size-justify{
+  font-size: 88% !important;
+  text-align: center; /* preguntar si dejar justify o center*/
+}
+
+/*----------------------------------------------------Estilos de "Ofrecemos"----------------------------------------------------*/
+
+.section__title{
+  text-align: center;
+  font-size: 30px;
+  color: #CD4444;
+}
+
+.ofrecemos-title-description{
+  margin-top: -30px; 
+  margin-bottom: 70px; 
+  font-size: 114%; 
+  text-align: center;
+}
+
+.ofrecemos__column{
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.ofrecemos__description{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  width: 60%;
+  height: 100%;
+  padding: 5px;
+}
+
+.ofrecemos__title{
+  font-size: 25px;
+  margin: 5px 0;
+  /*text-decoration: underline; */
+}
+
+.ofrecemos-text-description-size{
+  font-size: 120% !important;
+}
+
+.ofrecemos__img{
+  width: 100%;
+}
+/*------------------------------------------------------Estilos del footer------------------------------------------------------*/
+.footer{
+  background: #333;
+  color: #fff;
+  padding: 10px; 
+  text-align: center;
+}
+
+.footer .social .fab {  /*[class^="icon-"]  */
+  display: inline-block;
+  color: #333;
+  background: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  padding-top: 5px;
+  padding-right: -1px;
+}
+/*------------------------------------------------------Estilos del mapa--------------------------------------------------------*/
+.mapa{
+  position: relative;
+  top:-350px;
+  border-radius: 5px;
+}
+/*-----------------------------------------------Estilos del formulario de contacto---------------------------------------------*/
+.form_contact{
+  margin-top: -350px;    /*Controla el margen de lo que es todo el formulario, incluyendo el titulo*/
+}
+.form_margin{
+  margin-top: -30px;     /*Controla el margen de solo lo que es la seccion de formulario, sin incluir el titulo */
+}
+.title_form-contact {
+    color: #CD4444;
+    font-size: 37px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #CD4444;
+    position: relative;
+    left: -385px;
+    top: 48px;
+}
+.button_send{
+  background-color: #CD4444;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  height: 40px;
+  width: 80px;
+  padding: 0px 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.body{
+  background: rgba(0,0,0,0.2); /* Hacerlo un poco mas opaco ya que el blanco incomoda a la vista (alumbra mucho) */
+}
+.body_1{
+  background: rgba(0,0,0,0.3);
+}
+/*------------------------------------------------------Estilos galeria---------------------------------------------------*/
+.gallery{
+  margin-top: -150px;
+  display: flex;
+  flex-wrap: wrap;                            /* Centra la galeria */
+  justify-content: center;
+}
+.gallery_radius{
+  border-radius: 10px;                       /*Redondeo de las esquinas de las imagenes en miniatura*/
+  border: 6px solid #333;                    /*Hace el cuadro a las imagenes (en miniatura)*/
+}
+
+/*------------------------------------------------------Estilos de About----------------------------------------------------*/
+.img_about_left_1{
+  margin-top: -300px;
+  margin-left: 30px;
+  /*margin-bottom: 50px;*/
+  border-radius: 10px;
+}
+.text_about_right_1{
+  position: relative;
+  top: -475px;
+  color: #fff;
+  margin-left: 840px;
+  margin-right: 20px;
+  font-size: 19px;
+  font-weight: 500;
+}
+.title_about_right_1{
+  position: relative;
+  color: #fff;
+  font-weight:400;
+  top: -490px;
+  margin-left: 790px;
+  text-align: center;
+}
+                                            /*-----------------------------------------------*/
+.img_about_right{
+  position: relative;
+  right: -550px;
+  margin-top: -375px;
+  margin-right: 30px;
+  /*margin-bottom: 50px;*/
+  border-radius: 10px;
+}
+.text_about_left{
+  position: relative;
+  top: -475px;
+  color: #fff;
+  margin-right: 840px;
+  margin-left: 20px;
+  top:-330px;
+  font-size: 19px;
+  font-weight: 500;
+}
+.title_about_left{
+  position: relative;
+  color: #fff;
+  font-weight:400;
+  top: -350px;
+  margin-right: 830px;
+  text-align: center;
+}
+                                              /*--------------------------------------------*/
+.img_about_left_2{
+  margin-top: -100px;
+  margin-left: 30px;
+  /*margin-bottom: 50px;*/
+  border-radius: 10px;
+}
+.text_about_right_2{
+  position: relative;
+  top: -475px;
+  color: #fff;
+  margin-left: 840px;
+  margin-right: 20px;
+  top: -300px;
+  font-size: 19px;
+  font-weight: 500;
+}
+.title_about_right_2{
+  position: relative;
+  color: #fff;
+  font-weight:400;
+  top: -310px;
+  margin-left: 790px;
+  text-align: center;
+}
+.background_about{
+  background: rgba(0,0,0,0.6);
+  border-radius: 5px;
+}
+
+/*----------------------------------------Icono del avatar del usuario---------------------------------------*/
+.icon-avatar{
+  color:#CD4444; 
+  font-size: 150%;
+  background-color: #fff;
+  border-radius: 55%;
+}
+
+
+
+/*------------------------------------------------------Estilos responsive------------------------------------------------*/
+@media(min-width:480px){
+  .logo{
+    font-size: 30px;
+  }
+  .banner__title{
+    font-size: 25px;
+    margin: 5px 0;
+  }
+  .banner__text{
+    display: block;
+    font-size: 20px;
+    margin: 7px 0;
+  }
+  .info , .ofrecemos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -70px;
+  }
+  .section__title{
+    font-size: 23px;
+    margin-top: 60px;;
+    margin-bottom: 40px;
+  }
+  .ofrecemos-title-description{
+    font-size: 105%;
+    margin-bottom: 35px;
+  }
+  .ofrecemos__title{
+    font-size: 15px;
+    margin: 5px 0;
+    /*text-decoration: underline; */
+  }
+  /*.ofrecemos-text-description-size{
+    font-size: 54% !important;
+  }*/
+  .info__column{
+    width: 32%;
+  }
+  .info__title{
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin: 5px 0;
+    text-align: center;
+  }
+  .section__title{
+    width: 100%;
+  }
+  .ofrecemos{
+    flex-wrap: wrap;
+    margin-top: -30px; /*Posicion original 0px*/
+  }
+  .ofrecemos__column{
+    width: 49%;
+  }
+  .ofrecemos__text{
+    font-size: 11px;
+  }
+  .footer .social .fab {
+    margin: 0 5px;
+  }
+}
+
+@media(min-width:768px){
+  .banner__title{
+    font-size: 40px;
+  }
+  .banner__text{
+    font-size: 25px;
+  }
+  .info{
+    margin-top: -80px;
+  }
+  .ofrecemos__title{
+    font-size: 25px;
+  }
+  .ofrecemos__text{
+    font-size: 15px; /*Esta seccion si no se pone, tambien queda bien*/
+  }
+}
+
+@media(min-width:1024px){
+  .container{
+    width: 1000px;
+  }
+  .section__title{
+    margin: 40px 0;
+  }
+  .nav{
+    position: static;
+    width:auto;
+  }
+  .menu{
+    display: flex;
+  }
+  .icon-menu{
+    display: none;
+  }
+  .menu__link{
+    background: none;
+    font-size: 20px;
+  }
+  .menu__link:hover{
+    background: #fff;
+    color: #CD4444;
+    border-radius: 5px;
+  }
+  .select{
+    background: #CD4444;
+    color: #fff;
+    border-radius: 5px;
+  }
+  .banner__title{
+    font-size: 55px;
+  }
+  .banner__text{
+    font-size: 30px;
+  }
+  .info{
+    margin: 0 30px;
+    margin-top: -110px;
+  }
+  .info__column{
+    padding: 30px;
+    border-radius: 5px;
+  }
+  .info__title{
+    font-size: 35px;
+    text-align: center;
+  }
+  .info__text{
+    font-size: 20px;
+  }
+  .section__title{
+    font-size: 40px;
+    text-decoration: none;
+  }
+  .ofrecemos__description{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  .ofrecemos__title{
+    font-size: 40px;
+  }
+  .ofrecemos{
+    margin: 0 30px;
+  }
+}
+
+@media(min-width:1280px){
+  .container{
+    width: 1200px;
+  }
+  .logo{
+    font-size: 45px;
+  }
+  .banner__title{
+    font-size: 45px;
+  }
+  .banner .container{
+    top: 40%;
+  }
+  .info{
+    margin: 0 30px;
+    margin-top: -205px;
+    font-size: 24px;
+  }
+  .ofrecemos__title{
+    font-size: 28px;
+  }
+  .ofrecemos__text{
+    font-size: 20px;
+  }
+}

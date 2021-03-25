@@ -1,0 +1,58 @@
+
+/* 5. counter-area */
+.counter-area{}
+.single-counter {
+  background: #BB3030 none repeat scroll 0 0;
+  float: left;
+  padding-bottom: 90px;
+  padding-top: 90px;
+  width: 25%;
+}
+.single-counter:nth-child(2n) {
+  background: #922828 none repeat scroll 0 0;
+}
+.counter-text {
+  text-align: center;
+}
+.counter-text h3 {
+  color: #fff;
+  font-family: inherit;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 37px;
+  margin-bottom: 25px;
+}
+.counter-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* 13. about-area 
+.about-area{}
+.about-text{}
+.about-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.about-text p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.progress-bar {
+  background-color: #3452FF;
+  box-shadow: none;
+}
+.progress {
+  border-radius: 4px;
+  box-shadow: none;
+  height: 4px;
+  margin-bottom: 20px;
+}
+.our-skill h6 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+*/

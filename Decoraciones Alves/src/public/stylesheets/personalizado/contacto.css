@@ -1,0 +1,82 @@
+/* 10. contact-area */
+.contact-middle-area{}
+.pt-100 { padding-top: 100px }
+.pb-70 { padding-bottom: 70px }
+.mb-30 { margin-bottom: 30px }
+.ptb-60 { padding: 60px 0 }
+.middle-text{}
+.middle-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.middle-text p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.middle-text > a {
+  color: #3452ff;
+  font-size: 14px;
+}
+#map{height:300px;width:100%}
+.contact-bottom-area{}
+.contact-bottom-text {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  position: relative;
+}
+#contact-form{}
+#contact-form input {
+  border: 2px solid #eee;
+  border-radius: 2px;
+  color: #999;
+  font-size: 14px;
+  height: 39px;
+  margin-bottom: 20px;
+  padding: 7px 10px;
+  width: 100%;
+  text-transform: capitalize;
+}
+#contact-form textarea {
+  border: 2px solid #eee;
+  color: #999;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.btn {
+  background: #3452FF;
+  border-radius: 0;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover{background:#3112FF;color:#fff;}
+.contact-bottom-text::before {
+  background: #CD4444 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 50px;
+}
+.contact-bottom-text h2 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.contact-bottom-text p {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 0;
+}

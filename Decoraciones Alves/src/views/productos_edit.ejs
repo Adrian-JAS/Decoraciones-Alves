@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+ <head>
+    <meta charset="utf-8">
+    <title>Decoraciones Alves</title>
+    <!--BootStrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--Material Design Bootstrap-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="../../stylesheets/mdbootstrap/mdb.min.css"> <!--Almacenado Local-->
+    <!--- STYLE PERSONALIZADO --> 
+    <link rel="stylesheet" href="../../stylesheets/personalizado/style.css"> 
+    <link rel="stylesheet" href="../../stylesheets/personalizado/navbar_color.css">
+    <!-- Style DataTable-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <!--Logo de Decoraciones Alves-->
+    <link rel="shortcut icon" href="../../images/logo/decoalves.png">
+ </head>
+
+ <body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../../images/logo/decoalves.png" alt="" width="70" height="60" class="d-inline-block align-center">
+                    <h1 class=""> Decoraciones Alves</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-current="page" href="usuarios">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active select" href="/productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="clientes">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="ventas">Ventas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="presupuestos">Presupuetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="proveedores">Proveedores</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <div class="card border-primary">
+            <div class="card-header">Editar Registro</div>
+            <div class="card-body">
+                <form action="/productos/update/<%= data.id %>" method="POST">
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <input type="text" class="form-control" value="<%= data.descripcion %>" id="descripcion" name="descripcion" tabindex="1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="costo" class="form-label">Costo</label>
+                        <input type="text" class="form-control" value="<%= data.costo %>" id="costo" name="costo" tabindex="2" required>
+                        <small>Ingrese los decimales con un "." hasta un maximo de dos (2) decimales. (Costo en divisas)</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="entrada" class="form-label">Entrada</label>
+                        <input type="number" class="form-control" value="<%= data.entrada %>" oninput="changeValueOfRemanente()" id="entrada" name="entrada" tabindex="3" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="salida" class="form-label">Salida</label>
+                        <input type="number" class="form-control" value="<%= data.salida %>" oninput="changeValueOfRemanente()" id="salida" name="salida" tabindex="4">
+                    </div>
+                    <div class="mb-3">
+                        <label for="remanente" class="form-label">Remanente</label>
+                        <input type="number" class="form-control" value="<%= data.remanente %>" id="remanente" name="remanente" tabindex="5" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary" tabindex="6">Guardar</button>
+                    <a href="/productos" class="btn btn-danger">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery --> 
+    <script type="text/javascript" src="../../javascripts/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap and Popper,core JavaScript and Bootstrap tooltips (Cualquier error, poner el bundle por separado,es decir, Bootstrap y Popper)--> <!-- Se puede poner o no poner, solo es para el boostrap(Esta puesto por si acaso, cualquier fallo, quitar)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!--DataTables JS -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <!-- MDB core JavaScript (Usado para el NavBar) -->
+    <script type="text/javascript" src="../../javascripts/mdbootstrap/mdb.min.js"></script>
+    <!-- MDB-KIT Javascript-->
+    <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+    
+    <script>
+         function changeValueOfRemanente() {
+             var entrada = document.getElementById("entrada").value;
+             var salida = document.getElementById("salida").value;
+             var remanente = entrada - salida;
+             if (remanente <= 0) {
+                remanente = 0;
+             }else {
+                 remanente;
+             }
+             document.getElementById("remanente").value = remanente;
+        };
+    </script>
+
+ </body>   
+</html>
+    
