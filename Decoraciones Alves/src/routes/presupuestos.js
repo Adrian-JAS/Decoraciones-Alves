@@ -4,7 +4,7 @@ var router = express.Router();
 const presupuestosController = require('../controllers/presupuestosController');
 
 /* GET presupuestos. */
-router.get('/', presupuestosController.list); //Muestra los registros
+router.get('/', presupuestosController.list); 
 router.post('/add', presupuestosController.save);
 router.get('/delete/:id', presupuestosController.delete);
 

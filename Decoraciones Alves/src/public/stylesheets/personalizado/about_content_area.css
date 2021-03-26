@@ -1,5 +1,4 @@
 
-/* 5. counter-area */
 .counter-area{}
 .single-counter {
   background: #BB3030 none repeat scroll 0 0;
@@ -29,30 +28,3 @@
   color: #fff;
   margin-bottom: 0;
 }
-
-/* 13. about-area 
-.about-area{}
-.about-text{}
-.about-text h4 {
-  font-size: 16px;
-  font-weight: 600;
-}
-.about-text p {
-  font-size: 14px;
-  font-weight: 400;
-}
-.progress-bar {
-  background-color: #3452FF;
-  box-shadow: none;
-}
-.progress {
-  border-radius: 4px;
-  box-shadow: none;
-  height: 4px;
-  margin-bottom: 20px;
-}
-.our-skill h6 {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-*/

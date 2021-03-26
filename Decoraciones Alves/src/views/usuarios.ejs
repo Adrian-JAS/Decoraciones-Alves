@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!--Material Design Bootstrap-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"rel="stylesheet"/>
-    <link rel="stylesheet" href="../stylesheets/mdbootstrap/mdb.min.css"> <!--Almacenado Local-->
+    <link rel="stylesheet" href="../stylesheets/mdbootstrap/mdb.min.css"> 
     <!--- STYLE PERSONALIZADO --> 
     <link rel="stylesheet" href="../stylesheets/personalizado/style.css"> 
     <link rel="stylesheet" href="../stylesheets/personalizado/navbar_color.css">
@@ -87,7 +87,7 @@
                                 <td><%= data[i].contraseña %></td>
                                 <td><%= data[i].rol %></td>
                                 <td>
-                                    <!-- <a href="/usuarios/delete/<%= data[i].id %>" class="btn btn-danger"><i class="fas fa-trash"></a> En vez del evento "onclick del boton eliminar esta esta alternativa sin ese evento"-->
+                                    <!-- <a href="/usuarios/delete/<%= data[i].id %>" class="btn btn-danger"><i class="fas fa-trash"></a>-->
                                     <a onclick="confirmar( <%= data[i].id %> )" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                     <a href="/usuarios/update/<%= data[i].id %>" class="btn btn-info"><i class="fas fa-edit"></i></a>
                                 </td>
@@ -101,7 +101,7 @@
 
     <!-- jQuery --> 
     <script type="text/javascript" src="../javascripts/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap and Popper,core JavaScript and Bootstrap tooltips (Cualquier error, poner el bundle por separado,es decir, Bootstrap y Popper)--> <!-- Se puede poner o no poner, solo es para el boostrap(Esta puesto por si acaso, cualquier fallo, quitar)-->
+    <!-- Bootstrap and Popper,core JavaScript and Bootstrap tooltips-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!--DataTables JS -->
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>

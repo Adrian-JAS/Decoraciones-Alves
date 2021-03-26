@@ -2,11 +2,11 @@ const controller = {};
 
 controller.list = function(req, res, next) {
     req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM clientes', (err, cliente) => { // usuario es un nombre generico para hacer referencia a los datos, se pudo poner o row(filas) o usuarios
+        conn.query('SELECT * FROM clientes', (err, cliente) => { 
             if(err) {
                 res.json(err);
             }
-            //console.log(usuario); Verifica si los datos estan entrando.
+            //console.log(usuario); 
             if(req.session.loggedin) {
                 res.render('clientes', {
                     data: cliente,

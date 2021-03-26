@@ -4,7 +4,7 @@ var router = express.Router();
 const ventasController = require('../controllers/ventasController');
 
 /* GET ventas. */
-router.get('/', ventasController.list); //Muestra los registros
+router.get('/', ventasController.list); 
 router.post('/add', ventasController.save);
 router.get('/delete/:id', ventasController.delete);
 

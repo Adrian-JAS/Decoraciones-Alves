@@ -4,7 +4,7 @@ var router = express.Router();
 const productosController = require('../controllers/productosController');
 
 /* GET productos. */
-router.get('/', productosController.list); //Muestra los registros
+router.get('/', productosController.list); 
 router.post('/add', productosController.save);
 router.get('/delete/:id', productosController.delete);
 

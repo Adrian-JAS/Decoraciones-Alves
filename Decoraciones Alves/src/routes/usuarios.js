@@ -4,7 +4,7 @@ var router = express.Router();
 const usuariosController = require('../controllers/usuariosController');
 
 /* GET usuarios. */
-router.get('/', usuariosController.list); //Muestra los registros
+router.get('/', usuariosController.list); 
 router.post('/add', usuariosController.save);
 router.get('/delete/:id', usuariosController.delete);
 

@@ -4,7 +4,7 @@ var router = express.Router();
 const proveedoresController = require('../controllers/proveedoresController');
 
 /* GET proveedores. */
-router.get('/', proveedoresController.list); //Muestra los registros
+router.get('/', proveedoresController.list); 
 router.post('/add', proveedoresController.save);
 router.get('/delete/:id', proveedoresController.delete);
 

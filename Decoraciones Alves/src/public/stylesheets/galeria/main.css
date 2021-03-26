@@ -1,8 +1,4 @@
-/*************************
-********* Portfolio CSS ******
-**************************/
-
-.recent-work-wrap .overlay { /*Importante*/
+.recent-work-wrap .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -29,7 +25,7 @@
     justify-content: center;
 }
 
-.recent-work-wrap .overlay .preview { /*Importante*/
+.recent-work-wrap .overlay .preview {
     color: #fff;
     height: 50px;
     width: 50px;
@@ -39,7 +35,7 @@
     line-height: 50px;
 }
 
-.recent-work-wrap:hover .overlay { /*Importante*/
+.recent-work-wrap:hover .overlay {
     opacity: 1;
 }
 
@@ -98,11 +94,7 @@
     padding: 5px;
 }
 
-
-/* Start: Recommended Isotope styles */
-
-
-/**** Isotope Filtering ****/
+/*********************************************************************************************************/
 
 .isotope-item {
     z-index: 2;
@@ -113,8 +105,7 @@
     z-index: 1;
 }
 
-
-/**** Isotope CSS3 transitions ****/
+/******/
 
 .isotope,
 .isotope .isotope-item {
@@ -135,12 +126,3 @@
     transition-property: transform, opacity, -webkit-transform;
 }
 
-
-/**** disabling Isotope CSS3 transitions ****/
-
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-    -webkit-transition-duration: 0s;
-    transition-duration: 0s;
-}

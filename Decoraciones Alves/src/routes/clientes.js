@@ -4,7 +4,7 @@ var router = express.Router();
 const clientesController = require('../controllers/clientesController');
 
 /* GET clientes. */
-router.get('/', clientesController.list); //Muestra los registros
+router.get('/', clientesController.list); 
 router.post('/add', clientesController.save);
 router.get('/delete/:id', clientesController.delete);
 
